@@ -1,13 +1,13 @@
 {% set name = "rst-to-myst" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rst-to-myst-{{ version }}.tar.gz
-  sha256: 4d944e1afcd12922a7b8e418558cafc1b5888fba0a2819268c0fd60c2df2f7ac
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 877fb4664eb25d5f2536f8c6045ece765844a32619adde5bfb772215370c2b34
 
 build:
   noarch: python
