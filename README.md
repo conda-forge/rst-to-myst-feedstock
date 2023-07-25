@@ -1,11 +1,11 @@
-About rst-to-myst
-=================
+About rst-to-myst-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rst-to-myst-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/executablebooks/rst-to-myst
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rst-to-myst-feedstock/blob/main/LICENSE.txt)
 
 Summary: Convert RST to MyST-Markdown.
 
