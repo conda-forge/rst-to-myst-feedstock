@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rst_to_myst-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rst_to_myst-{{ version }}.tar.gz
   sha256: 877fb4664eb25d5f2536f8c6045ece765844a32619adde5bfb772215370c2b34
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - rst2myst = rst_to_myst.cli:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - docutils >=0.17,<0.20
     # for all python so we can stay noarch
     - importlib_resources >=3.1,<4.dev0
@@ -41,6 +41,7 @@ test:
     - rst2myst --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/executablebooks/rst-to-myst
